@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block head %}
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="/static/js/myFunction.js"></script>
+		{% endblock %}
+	</head>
+	<body class="loggedin w3-animate-right">
+<!------------Example---------------------------------->
+<!--------------------------NavBar----------------------------------->
+<div>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/" class="w3-bar-item w3-button w3-wide"><img src="/static/images/logo.png" alt="company logo"></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="{{url_for('home')}}" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Home</a>
+          <a href="{{url_for('profile')}}" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>profile</a>
+          <a href="{{url_for('logout')}}" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Logout</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars" style="font-size: 48px;"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close×</a>
+  <a href="{{url_for('home')}}" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="{{url_for('profile')}}" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
+  <a href="{{url_for('logout')}}" onclick="w3_close()" class="w3-bar-item w3-button">LogOut</a>
+</nav>
+  </div>
+		
+		
+<!---------------------------NAv-----------------------
+	<div>
+		<div class="w3-top">
+			<div class="w3-bar w3-white w3-card" id="myNavbar">
+				
+				<a href="/" class="w3-bar-item w3-button w3-wide"><img src="/static/images/logo.png" alt="Company Logo"></a>
+		
+				-Right Sided navbar links--
+				<div class="w3-right navbar-small">
+					<a href="{{url_for('home')}}" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>home</a>
+					<a href="{{url_for('profile')}}" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Profile</a>
+					<a href="{{url_for('logout')}}" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Logout</a>
+				</div>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+					<i class="fa fa-bars" style="font-size: 48px;"></i>
+				</a>
+			</div>
+		</div>
+		<-- Sidebar on small screens when clicking the menu icon --
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+	<a href="{{ url_for('home') }}" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+	<a href="{{ url_for('profile') }}" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
+	<a href="{{ url_for('logout') }}" onclick="w3_close()" class="w3-bar-item w3-button">Logout</a>
+	
+  </nav>
+	</div>
+<---------------------------------->
+<br><br><br><br><br><br>
+<!-----------------------------------------------------------
+		<nav class="navtop">
+			<div>
+				<h1>Welcome To Our Website</h1>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+-------------------------------------------------->
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+<!-----------------------------------
+		<script>
+			// Modal Image Gallery
+			function onClick(element) {
+			  document.getElementById("img01").src = element.src;
+			  document.getElementById("modal01").style.display = "block";
+			  var captionText = document.getElementById("caption");
+			  captionText.innerHTML = element.alt;
+			}
+			
+			
+			// Toggle between showing and hiding the sidebar when clicking the menu icon
+			var mySidebar = document.getElementById("mySidebar");
+			
+			function w3_open() {
+			  if (mySidebar.style.display === 'block') {
+				mySidebar.style.display = 'none';
+			  } else {
+				mySidebar.style.display = 'block';
+			  }
+			}
+			
+			// Close the sidebar with the close button
+			function w3_close() {
+				mySidebar.style.display = "none";
+			}
+			</script>
+----------------------------------------------------------------------------------------------------------->
+
+<script>
+	// Modal Image Gallery
+	function onClick(element) {
+	  document.getElementById("img01").src = element.src;
+	  document.getElementById("modal01").style.display = "block";
+	  var captionText = document.getElementById("caption");
+	  captionText.innerHTML = element.alt;
+	}
+	
+	
+	// Toggle between showing and hiding the sidebar when clicking the menu icon
+	var mySidebar = document.getElementById("mySidebar");
+	
+	function w3_open() {
+	  if (mySidebar.style.display === 'block') {
+		mySidebar.style.display = 'none';
+	  } else {
+		mySidebar.style.display = 'block';
+	  }
+	}
+	
+	// Close the sidebar with the close button
+	function w3_close() {
+		mySidebar.style.display = "none";
+	}
+
+
+	</script>
+	<script src="{{ url_for('static', filename='/js/myFunction.js') }}"></script>
+	</body>
+</html>

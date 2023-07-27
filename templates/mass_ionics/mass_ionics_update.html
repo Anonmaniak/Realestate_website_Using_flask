@@ -1,0 +1,25 @@
+{% extends '/mass_ionics/base_mass_ionics.html' %}
+{% block head %}
+<title>Posts Page </title>
+{% endblock%}
+
+{% block body %}
+<br>
+    <div>
+        <h1 style="display: inline">All Updates Here: </h1>
+        <a href="" class="btn btn-success float-right">Admin</a>
+        <a style="display: inline" class="btn btn-success float-right" href="/login/home/mass_ionics/mass_ionics_update/new_post_mass_ionics">+ New Post</a>
+    </div>
+    <br>
+    <hr>
+    {% for post in posts%}
+    <h2>{{post.title}}</h2>
+    <small>Written By {{post.posted_by}} on {{post.posted_on}}</small>
+    <p style="white-space: pre-wrap">{{post.content}}</p>
+    <br>
+    <a href="/login/home/mass_ionics/mass_ionics_update/delete_mass_ionics/{{post.id}}"><button>Delete</button></a>
+    <a href="/login/home/mass_ionics/mass_ionics_update/edit_mass_ionics/{{post.id}}"><button>Edit</button></a>
+    <hr>
+    {% endfor %}
+
+{% endblock%}

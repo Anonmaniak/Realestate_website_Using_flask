@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .responsive{
+        width: 100%;
+        height: auto;
+      }
+
+      #sizeofimages{
+        width: 600;
+        height: 400;
+      }
+      
+    </style>
+</head>
+<body class="w3-animate-right">
+  <!--------------------------NavBar----------------------------------->
+  <div>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/" class="w3-bar-item w3-button w3-wide"><img src="{{user_img}}" alt="company logo"></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="/projects" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Projects</a>
+          <a href="/login" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Login</a>
+          <a href="/login/register" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Register</a>
+          <a href="/aboutus" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>About</a>
+          <a href="/contactus" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Contact Us</a>
+          
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars" style="font-size: 48px;"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="/projects" onclick="w3_close()" class="w3-bar-item w3-button">Projects</a>
+  <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+  <a href="/login/register" onclick="w3_close()" class="w3-bar-item w3-button">Register</a>
+  <a href="/aboutus" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
+  <a href="/contactus" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
+</nav>
+  </div>
+  
+  <br><br><br><br><br>
+    <div>
+      <!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align: center">Ongoing Projects</h3>
+  </div>
+<br>
+
+<!----------------------------Paragraph 1--------------------------------------------------------------------------------------------->
+<div class="w3-row-padding">
+  <div class="w3-col m3 w3-margin-bottom" id="sizeofimages">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Mass Ionics</div>
+      <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 300px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+        <a target="_blank" href="http://127.0.0.1:5000/login/home#1">
+          <img class="responsive" id="sizeofimages" src="/static/images/massionicsongoing.jpeg" alt="A photo">
+        </a>
+        <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+          <div class="w3-container">
+            <a href="http://127.0.0.1:5000/login/home"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-col m4 w3-margin-bottom" id="sizeofimages">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Mass Metropolis</div>
+      <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 400px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+        <a target="_blank" href="#2">
+          <img class="responsive" id="sizeofimages" src="/static/images/massmetropolisongoing.jpg" alt="A photo">
+        </a>
+        <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+          <div class="w3-container">
+            <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Mass U Foria</div>
+      <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 300px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+        <a target="_blank" href="#3">
+          <img class="responsive" id="sizeofimages" src="/static/images/massuforiaongoing.jpeg" alt="A photo">
+        </a>
+        <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+          <div class="w3-container">
+            <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!----------------------------Paragraph 2--------------------------------------------------------------------------------------------->
+<div class="w3-row-padding">
+  <div class="w3-col m3 w3-margin-bottom" id="sizeofimages">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Mass Ionics</div>
+      <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 300px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+        <a target="_blank" href="#1">
+          <img class="responsive" id="sizeofimages" src="/static/images/ongoing1.jpeg" alt="A photo">
+        </a>
+        <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+          <div class="w3-container">
+            <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-col m4 w3-margin-bottom" id="sizeofimages">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Mass Metropolis</div>
+      <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 400px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+        <a target="_blank" href="#2">
+          <img class="responsive" id="sizeofimages" src="/static/images/serenesheltersongoing.png" alt="A photo">
+        </a>
+        <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+          <div class="w3-container">
+            <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-col m4 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Mass U Foria</div>
+      <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 300px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+        <a target="_blank" href="#3">
+          <img class="responsive" id="sizeofimages" src="/static/images/sheetalpalaceongoing.jpg" alt="A photo">
+        </a>
+        <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+          <div class="w3-container">
+            <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+
+  <!--------Completed Projects--------------------------------------->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align: center">Completed Projects</h3>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
+        <img src="/static/images/serenesheltersongoing.png" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
+        <img src="/static/images/sheetalpalaceongoing.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
+        <img src="/w3images/house4.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
+        <img src="/w3images/house3.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
+        <img src="/static/images/serenesheltersongoing.png" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
+        <img src="/static/images/sheetalpalaceongoing.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
+        <img src="/w3images/house4.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
+        <img src="/w3images/house3.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+      
+      
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+      
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+        } else {
+          mySidebar.style.display = 'block';
+        }
+      }
+      
+      // Close the sidebar with the close button
+      function w3_close() {
+          mySidebar.style.display = "none";
+      }
+      </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .ent2{
+        text-align: left;
+      }
+    </style>
+</head>
+<body style="text-align: center;" class="w3-animate-right">
+  <!--------------------------NavBar----------------------------------->
+  <div>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/" class="w3-bar-item w3-button w3-wide"><img src="{{user_img}}" alt="company logo"></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="/projects" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Projects</a>
+          <a href="/login" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Login</a>
+          <a href="/login/register" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Register</a>
+          <a href="/aboutus" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>About</a>
+          <a href="/contactus" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Contact Us</a>
+          
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars" style="font-size: 48px;"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="/projects" onclick="w3_close()" class="w3-bar-item w3-button">Projects</a>
+  <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+  <a href="/login/register" onclick="w3_close()" class="w3-bar-item w3-button">Register</a>
+  <a href="/aboutus" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
+  <a href="/contactus" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
+</nav>
+  </div>
+
+
+  
+  
+    <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <br><br><br><br><br><br><br>
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">About Us</h1>
+    <p style="text-align: center;">
+        The Mass Group was initiated in the year 1994 with a view to serve the clients with wondrous masterpiece. The builder group binds desire with comfort to provide the clients with elegant, dazzling and superb houses.
+
+ 
+The group makes an art work which speaks about their perfection and talent in enrolling the best skilled men in the right place. The group deals in commercial as well as residential projects. Their core focus is to deliver the best in the assured time with a classy work finish. They are experts in their field and also guide their clients through various solutions in the property related topics. Mass Group have introduced many schemes and alternative for their clients to build their homes not just houses.
+    </p>
+  </div>
+<!----------------------Our Focus-------------------->
+  <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our Focus</h1>
+<br><br>
+  <div>
+    <!-- Mission/Vision -->
+<div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:700px">
+    
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+          <div class="w3-col s6 tablink">MISSION</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+          <div class="w3-col s6 tablink">VISION</div>
+        </a>
+      </div>
+  
+      <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+        <div style="text-align: center;">
+            To become a reliable and major stakeholder in the construction business across the State of Maharashtra. Maintaining a competitive environment with insightful designs and eco-friendly construction technologies. Contribute to the society with sustainable development by adapting to the fast changing socio-economic needs of the residents.
+        </div>
+      </div>
+  
+      <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+        <div style="text-align: center;">
+            To assist and help people by fulfilling their needs by creating spaces and enriching the quality of life. Providing a harmonious and dynamic environment for growth and proseperity.
+        </div>
+      </div>  
+    
+    </div>
+  </div>
+  </div>
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+    </script>
+<br><br><br><br>
+  <!--------Team--------------------------------------------->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/static/images/logo.png" alt="John" style="width:100%">
+      <h3>Name</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      <p>To Write </p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/static/images/logo.png" alt="Jane" style="width:100%">
+      <h3>Name</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>To Write</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/static/images/logo.png" alt="Mike" style="width:100%">
+      <h3>Name</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>To Write</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/static/images/logo.png" alt="Dan" style="width:100%">
+      <h3>Name</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>To Write</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    </script>
+</body>
+</html>

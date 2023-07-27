@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .eent{
+        text-align: center;
+      }
+
+.fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+      }
+    </style>
+
+</head>
+<body class="w3-animate-right">
+  <!--------------------------NavBar----------------------------------->
+  <div>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/" class="w3-bar-item w3-button w3-wide"><img src="{{user_img}}" alt="company logo"></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="/projects" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Projects</a>
+          <a href="/login" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Login</a>
+          <a href="/login/register" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Register</a>
+          <a href="/aboutus" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>About</a>
+          <a href="/contactus" class="w3-bar-item w3-button"><i class="Material-icons" style="font-size: 48px;"></i>Contact Us</a>
+          
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars" style="font-size: 48px;"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close×</a>
+  <a href="/projects" onclick="w3_close()" class="w3-bar-item w3-button">Projects</a>
+  <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+  <a href="/login/register" onclick="w3_close()" class="w3-bar-item w3-button">Register</a>
+  <a href="/aboutus" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
+  <a href="/contactus" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
+</nav>
+  </div>
+<!------------------------------------------------------------------>
+
+<div class="eent">
+  <br><br><br><br><br><br><br>
+  <h1>OUR SOCIAL PRESENCE</h1>
+  <h2>Contact Us</h2>
+  <p>Phone No: 022 2605 1786</p>
+  <p>Email: massinfo@massgroupofcompanies.com</p>
+  <p>
+    Address: 
+            Mass Group Construction House, 7/49 of Anand Nagar, 
+            Sahayog CHS Ltd, MHB Colony, Western express 
+            highway, Santacruz (E), Mumbai 400055
+  </p>
+  <br>
+  <br>
+  <h3 style="text-align: center;">Follow Us</h3>
+  <a href="https://www.facebook.com/massgroupofcompanies" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/MassGroup5" class="fa fa-twitter"></a>
+  <a href="https://www.instagram.com/massgroupcompanies/" class="fa fa-instagram"></a>
+</div>
+
+<script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  
+  
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+    
+</body>
+</html>

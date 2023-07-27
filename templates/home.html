@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .responsive{
+          width: 100%;
+          height: auto;
+        }
+  
+        #sizeofimages{
+          width: 600;
+          height: 400;
+        }
+        
+      </style>
+</head>
+<body>
+    <h2>Home Page</h2>
+    <div>
+      <p style="display: inline;">Welcome back, {{ username }}!</p> 
+    </div>
+    <!----------Ongoing project-------------------------------------------------------------------------------------------->
+    <div>
+        <h2>Ongoing Projects</h2>
+        <!----------------------------Paragraph 1--------------------------------------------------------------------------------------------->
+<div class="w3-row-padding">
+    <div class="w3-col" id="sizeofimages">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Mass Ionics</div>
+        <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 300px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+          <a target="_blank" href="#1">
+            <img class="responsive" id="sizeofimages" src="/static/images/massionicsongoing.jpeg" alt="A photo">
+          </a>
+          <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+            <div class="w3-container">
+              <a href="/login/home/mass_ionics" target="_blank"><button class="w3-button w3-blue w3-round-xxlarge">More Details</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col" id="sizeofimages">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Mass Metropolis</div>
+        <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 400px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+          <a target="_blank" href="#2">
+            <img class="responsive" id="sizeofimages" src="/static/images/massmetropolisongoing.jpg" alt="A photo">
+          </a>
+          <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+            <div class="w3-container">
+              <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Mass U Foria</div>
+        <div style="margin: 5px; border: 1px solid #ccc; float: left; width: 300px; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 25px;">
+          <a target="_blank" href="#3">
+            <img class="responsive" id="sizeofimages" src="/static/images/massuforiaongoing.jpeg" alt="A photo">
+          </a>
+          <div style="padding: 15px; text-align: center;"> Add a description of the images here!
+            <div class="w3-container">
+              <a href="#"><button class="w3-button w3-blue w3-round-xxlarge">For More Details</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------------------------------------------------------------------------------------------------------------------->
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------------->
+    
+</body>
+
+
+{% endblock %}
+
